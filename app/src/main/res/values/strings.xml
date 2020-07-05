@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Predictezy</string>
+    <string name="ask">Ask</string>
+    <string name="askquestions">Ask Questions</string>
+    <string name="awayTeam">Away Team:</string>
+    <string name="back">Back</string>
+    <string name="backToHomePage">Back To Home Page</string>
+    <string name="backtologin">Back To Login</string>
+    <string name="bundesliga"><b>Bundesliga</b></string>
+    <string name="chooseteams">Choose Teams</string>
+    <string name="dash">-</string>
+    <string name="dev_name">Designed and Developed by\nAayush Kumaria</string>
+    <string name="devnameauthor"><i>-Aayush Kumaria</i></string>
+    <string name="drawchance">Draw %</string>
+    <string name="email">Email ID</string>
+    <string name="emailidsignup">Email ID:</string>
+    <string name="forgotpassword">Forgot Password?</string>
+    <string name="forgotpasswordheading">Forgot Password</string>
+    <string name="homeTeam">Home Team:</string>
+    <string name="laliga"><b>La Liga</b></string>
+    <string name="league">League</string>
+    <string name="leaguestandingsBL">Bundesliga - Standings</string>
+    <string name="leaguestandingsL1">Ligue 1- Standings</string>
+    <string name="leaguestandingsLL">La Liga - Standings</string>
+    <string name="leaguestandingsPL">Premier League - Standings</string>
+    <string name="leaguestandingsSA">Serie A - Standings</string>
+    <string name="ligue1"><b>Ligue 1</b></string>
+    <string name="login">Login:</string>
+    <string name="loginhere">Existing User? Login Here</string>
+    <string name="logout">Logout</string>
+    <string name="matchPredictionsBL">Predictions - Bundesliga</string>
+    <string name="matchPredictionsL1">Predictions - Ligue 1</string>
+    <string name="matchPredictionsLL">Predictions - La Liga</string>
+    <string name="matchPredictionsPL">Predictions - Premier League</string>
+    <string name="matchPredictionsSA">Predictions - Serie A</string>
+    <string name="matchpredictions"><u>Match Predictions</u></string>
+    <string name="name">Name</string>
+    <string name="notice">Notice</string>
+    <string name="noticepara">Predictezy is an application that is capable of predicting the final outcome of a football match or how the league shapes up after a couple of matches are played. \n\nTo do this, Predictezy needs authentic data. Therefore apart from this application, I do not own any of the images or names of any of the clubs or leagues referenced to in this application. All rights to their respective owners. \n\nThat being said, enjoy predicting matches of the beautiful game</string>
+    <string name="password">Password</string>
+    <string name="passwordsignup">Password:</string>
+    <string name="pleasewait">Please Wait While Predictezy Connects to the Server</string>
+    <string name="points">Points</string>
+    <string name="position">Position</string>
+    <string name="predict">Predict</string>
+    <string name="predictions">Predictions</string>
+    <string name="premierleague"><b>Premier League</b></string>
+    <string name="question">Question</string>
+    <string name="recover">Recover</string>
+    <string name="request">Request</string>
+    <string name="requestleague">Request A League</string>
+    <string name="selectAHomeTeam">Select A Home Team</string>
+    <string name="selectAnAwayTeam">Select An Away Team</string>
+    <string name="seriea"><b>Serie A</b></string>
+    <string name="signin">Sign In</string>
+    <string name="signup">Sign Up</string>
+    <string name="signuphere">New User? Sign Up Here</string>
+    <string name="standings">Standings</string>
+    <string name="standingspredictions"><u>League Table Predictions</u></string>
+    <string name="team">Team</string>
+    <string name="versus">Versus</string>
+    <string name="vs">vs</string>
+    <string name="welcome">Welcome To Predictezy</string>
+    <string name="winningchance">Winning %</string>
+
+    <array name="BLTeams">
+        <item>Select A Team</item>
+        <item>Bayern Munich</item>
+        <item>Fortuna Dusseldorf</item>
+        <item>Freiburg</item>
+        <item>M\'Gladbach</item>
+        <item>Wolfsburg</item>
+        <item>Borussia Dortmund</item>
+        <item>Augsburg</item>
+        <item>Eintracht Frankfurt</item>
+        <item>Hoffenheim</item>
+        <item>Bayer Leverkusen</item>
+        <item>RB Leipzig</item>
+        <item>Schalke 04</item>
+        <item>Mainz</item>
+        <item>Hertha Berlin</item>
+        <item>Werder Bremen</item>
+        <item>FC Union Berlin</item>
+        <item>Cologne</item>
+        <item>Paderborn 07</item>
+    </array>
+    <array name="BLTeamsShortHand">
+        <item>BAY</item>
+        <item>DUS</item>
+        <item>SCF</item>
+        <item>BMG</item>
+        <item>WOB</item>
+        <item>DOR</item>
+        <item>AUG</item>
+        <item>SGE</item>
+        <item>TSG</item>
+        <item>B04</item>
+        <item>RBL</item>
+        <item>S04</item>
+        <item>MAI</item>
+        <item>BCS</item>
+        <item>SVW</item>
+        <item>UNB</item>
+        <item>CGN</item>
+        <item>SCP</item>
+    </array>
+    <array name="L1Teams">
+        <item>Select A Team</item>
+        <item>Marseille</item>
+        <item>Angers</item>
+        <item>Lille</item>
+        <item>Montpellier</item>
+        <item>Nantes</item>
+        <item>Nice</item>
+        <item>Bordeaux</item>
+        <item>Lyon</item>
+        <item>Reims</item>
+        <item>Amiens</item>
+        <item>Dijon</item>
+        <item>Monaco</item>
+        <item>Rennes</item>
+        <item>Nimes</item>
+        <item>Strasbourg</item>
+        <item>Toulouse</item>
+        <item>PSG</item>
+        <item>St Etienne</item>
+        <item>Brest</item>
+        <item>Metz</item>
+    </array>
+    <array name="L1TeamsShortHand">
+        <item>OLM</item>
+        <item>ANG</item>
+        <item>LIL</item>
+        <item>MPL</item>
+        <item>NAN</item>
+        <item>NCE</item>
+        <item>BOR</item>
+        <item>LYO</item>
+        <item>REI</item>
+        <item>AMI</item>
+        <item>DIJ</item>
+        <item>AMO</item>
+        <item>REN</item>
+        <item>NIM</item>
+        <item>STR</item>
+        <item>TOU</item>
+        <item>PSG</item>
+        <item>STE</item>
+        <item>B29</item>
+        <item>MTZ</item>
+    </array>
+    <array name="LLTeams">
+        <item>Select A Team</item>
+        <item>Real Betis</item>
+        <item>Barcelona</item>
+        <item>Celta Vigo</item>
+        <item>Villarreal</item>
+        <item>Real Madrid</item>
+        <item>Athletic Bilbao</item>
+        <item>Valencia</item>
+        <item>Getafe</item>
+        <item>Leganes</item>
+        <item>Alaves</item>
+        <item>Real Valladolid</item>
+        <item>Espanyol</item>
+        <item>Sevilla</item>
+        <item>Levante</item>
+        <item>Eibar</item>
+        <item>Atletico Madrid</item>
+        <item>Real Sociedad</item>
+        <item>Real Mallorca</item>
+        <item>Granada</item>
+        <item>Osasuna</item>
+    </array>
+    <array name="LLTeamsShortHand">
+        <item>BET</item>
+        <item>FCB</item>
+        <item>CLV</item>
+        <item>VIL</item>
+        <item>MAD</item>
+        <item>ATB</item>
+        <item>VAL</item>
+        <item>GET</item>
+        <item>LEG</item>
+        <item>ALV</item>
+        <item>REV</item>
+        <item>ESY</item>
+        <item>SEV</item>
+        <item>LVT</item>
+        <item>EIB</item>
+        <item>ATM</item>
+        <item>SOC</item>
+        <item>RCD</item>
+        <item>GCF</item>
+        <item>OSA</item>
+    </array>
+    <array name="PLTeams">
+        <item>Select A Team</item>
+        <item>Manchester United</item>
+        <item>Newcastle United</item>
+        <item>Watford</item>
+        <item>Wolverhampton Wanderers</item>
+        <item>Southampton</item>
+        <item>Liverpool</item>
+        <item>Arsenal</item>
+        <item>Leicester City</item>
+        <item>Everton</item>
+        <item>West Ham United</item>
+        <item>Chelsea</item>
+        <item>Burnley</item>
+        <item>Brighton and Hove Albion</item>
+        <item>Crystal Palace</item>
+        <item>AFC Bournemouth</item>
+        <item>Manchester City</item>
+        <item>Tottenham Hotspur</item>
+        <item>Sheffield United</item>
+        <item>Norwich City</item>
+        <item>Aston Villa</item>
+    </array>
+    <array name="PLTeamsShortHand">
+        <item>MUN</item>
+        <item>NEW</item>
+        <item>WAT</item>
+        <item>WLV</item>
+        <item>SOU</item>
+        <item>LIV</item>
+        <item>ARS</item>
+        <item>LEI</item>
+        <item>EVE</item>
+        <item>WHU</item>
+        <item>CHE</item>
+        <item>BUR</item>
+        <item>BRH</item>
+        <item>CRY</item>
+        <item>BOU</item>
+        <item>MCI</item>
+        <item>TOT</item>
+        <item>SHU</item>
+        <item>NOR</item>
+        <item>AVA</item>
+    </array>
+    <array name="SATeams">
+        <item>Select A Team</item>
+        <item>Lazio</item>
+        <item>Bologna</item>
+        <item>Parma</item>
+        <item>Sassuolo</item>
+        <item>Torino</item>
+        <item>Juventus</item>
+        <item>Napoli</item>
+        <item>Cagliari</item>
+        <item>Inter Milan</item>
+        <item>Spal</item>
+        <item>Udinese</item>
+        <item>Roma</item>
+        <item>AC Milan</item>
+        <item>Atalanta</item>
+        <item>Fiorentina</item>
+        <item>Sampdoria</item>
+        <item>Genoa</item>
+        <item>Verona</item>
+        <item>Lecce</item>
+        <item>Brescia</item>
+    </array>
+    <array name="SATeamsShortHand">
+        <item>LAZ</item>
+        <item>BGN</item>
+        <item>PRM</item>
+        <item>SAS</item>
+        <item>TOR</item>
+        <item>JUV</item>
+        <item>NAP</item>
+        <item>CAG</item>
+        <item>INT</item>
+        <item>SPA</item>
+        <item>UDI</item>
+        <item>ROM</item>
+        <item>MIL</item>
+        <item>ATT</item>
+        <item>FIO</item>
+        <item>SAM</item>
+        <item>GEN</item>
+        <item>HEL</item>
+        <item>LEC</item>
+        <item>BCA</item>
+    </array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

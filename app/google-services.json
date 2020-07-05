@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "965879817774",
+    "firebase_url": "https://predictezy-b0979.firebaseio.com",
+    "project_id": "predictezy-b0979",
+    "storage_bucket": "predictezy-b0979.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965879817774:android:0bcf5c545de226964221bf",
+        "android_client_info": {
+          "package_name": "com.predictezy.fp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965879817774-bjabovkvacqe6otfpbmlbphbo09r22dc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsQLJ5wjgnMpW54c_X2GQgBwyx3aZwZrY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "965879817774-bjabovkvacqe6otfpbmlbphbo09r22dc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

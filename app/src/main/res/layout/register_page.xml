@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textSize="40sp"
+        android:textColor="#fff"
+        android:id="@+id/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="@string/app_name"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/caros"
+        android:textAlignment="center"/>
+
+    <RelativeLayout
+        android:background="@drawable/rounded_border"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="25dp"
+        android:layout_below="@+id/app_name"
+        android:elevation="8dp"
+        android:layout_marginHorizontal="25dp"
+        android:paddingHorizontal="10dp">
+
+        <TextView
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:id="@+id/Welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/signup"
+            android:singleLine="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/caros"
+            android:textAlignment="center"
+            android:layout_marginHorizontal="10dp"/>
+
+        <View
+            android:id="@+id/linebreak"
+            android:background="#c0c0c0"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/Welcome"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="10dp"/>
+
+        <TextView
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:id="@+id/EmailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="15dp"
+            android:text="@string/emailidsignup"
+            android:singleLine="true"
+            android:layout_below="@+id/Welcome"
+            android:fontFamily="@font/caros"
+            android:textAlignment="center"
+            android:layout_alignParentStart="true"
+            android:layout_marginHorizontal="15dp"/>
+
+        <EditText
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:id="@+id/email"
+            android:background="@drawable/edit_text_border"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/Welcome"
+            android:layout_centerHorizontal="true"
+            android:inputType="textEmailAddress"
+            android:fontFamily="@font/caros"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/EmailText"/>
+
+        <TextView
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:id="@+id/PasswordText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginRight="15dp"
+            android:text="@string/passwordsignup"
+            android:singleLine="true"
+            android:layout_below="@+id/EmailText"
+            android:fontFamily="@font/caros"
+            android:textAlignment="center"
+            android:layout_alignParentStart="true"
+            android:layout_marginHorizontal="15dp"/>
+
+        <EditText
+            android:textSize="17sp"
+            android:textColor="#000"
+            android:id="@+id/password"
+            android:background="@drawable/edit_text_border"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/email"
+            android:layout_centerHorizontal="true"
+            android:inputType="textPassword"
+            android:fontFamily="@font/caros"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/PasswordText"/>
+
+        <Button
+            android:textSize="17sp"
+            android:id="@+id/buttonSignUp"
+            android:background="@drawable/button_rounded"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/signup"
+            android:layout_below="@+id/password"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="false"
+            android:fontFamily="@font/caros"/>
+
+        <TextView
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#fd3134"
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/loginhere"
+            android:singleLine="true"
+            android:layout_below="@+id/buttonSignUp"
+            android:fontFamily="@font/caros"
+            android:textAlignment="center"
+            android:layout_alignParentEnd="true"
+            android:layout_marginHorizontal="15dp"/>
+
+    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/ads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-2924639732611391/7335560461"/>
+
+</RelativeLayout>
