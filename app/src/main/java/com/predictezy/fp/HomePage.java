@@ -1,10 +1,12 @@
 package com.predictezy.fp;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -36,11 +38,6 @@ public class HomePage extends AppCompatActivity {
         super.onCreate(bundle);
         setContentView(R.layout.home_page);
 
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomnav);
-        bottomNavigationView.setOnNavigationItemSelectedListener(navListener);
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragmentcontainer, new FragmentMatches()).commit();
-
-
         mInterstitialAd = new InterstitialAd(this);
         mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
         MobileAds.initialize(HomePage.this, new OnInitializationCompleteListener() {
@@ -49,23 +46,50 @@ public class HomePage extends AppCompatActivity {
         });
         this.mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
+        AdView adView = new AdView(this);
+        adView.setAdSize(AdSize.BANNER);
+        adView.setAdUnitId("ca-app-pub-2924639732611391/6773233939");
+        MobileAds.initialize((Context) this, (OnInitializationCompleteListener) new OnInitializationCompleteListener() {
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+        this.mAdView = (AdView) findViewById(R.id.ads);
+        this.mAdView.loadAd(new AdRequest.Builder().build());
+
+        RelativeLayout relativeLayout0 = (RelativeLayout)findViewById(R.id.PremierLeague);
+        RelativeLayout relativeLayout1 = (RelativeLayout)findViewById(R.id.LaLiga);
+        RelativeLayout relativeLayout2 = (RelativeLayout)findViewById(R.id.Bundesliga);
+        RelativeLayout relativeLayout3 = (RelativeLayout)findViewById(R.id.SerieA);
+        RelativeLayout relativeLayout4 = (RelativeLayout)findViewById(R.id.Ligue1);
+
+        relativeLayout0.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                HomePage.this.startActivity(new Intent(HomePage.this, PremierLeagueMatches.class));
+            }
+        });
+        relativeLayout1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                HomePage.this.startActivity(new Intent(HomePage.this, LaLigaMatches.class));
+            }
+        });
+        relativeLayout2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                HomePage.this.startActivity(new Intent(HomePage.this, BundesligaMatches.class));
+            }
+        });
+        relativeLayout3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                HomePage.this.startActivity(new Intent(HomePage.this, SerieAMatches.class));
+            }
+        });
+        relativeLayout4.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                HomePage.this.startActivity(new Intent(HomePage.this, Ligue1Matches.class));
+            }
+        });
+
 
     }
-
-    private BottomNavigationView.OnNavigationItemSelectedListener navListener = new OnNavigationItemSelectedListener() {
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-            Fragment fragment;
-            int itemId = menuItem.getItemId();
-            if (itemId == R.id.table) {
-                fragment = new FragmentStandings();
-            } else {
-                fragment = new FragmentMatches();
-            }
-            HomePage.this.getSupportFragmentManager().beginTransaction().replace(R.id.fragmentcontainer, fragment).commit();
-            return true;
-        }
-    };
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -85,7 +109,7 @@ public class HomePage extends AppCompatActivity {
             startActivity(new Intent(this, AskQuestions.class));
         } else if (menuItem.getItemId() == R.id.logout) {
             this.mFirebaseAuth.signOut();
-            Toast.makeText(this, "Successfully Logged Out", 0).show();
+            Toast.makeText(this, "Successfully Logged Out", Toast.LENGTH_SHORT).show();
             startActivity(new Intent(this, LoginPage.class));
             finishAffinity();
         }
