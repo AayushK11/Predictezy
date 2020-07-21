@@ -8,20 +8,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <FrameLayout
-        android:id="@+id/fragmentcontainer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/bottomnav"/>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomnav"
-        android:background="@color/colorPrimary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:itemIconTint="@drawable/bottom_nav_color"
-        app:itemTextColor="@drawable/bottom_nav_text_color"
-        app:menu="@menu/bottom_nav"/>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fontFamily="@font/caros">
+        <TextView android:textSize="20sp" android:textColor="#fff" android:id="@+id/heading" android:background="#1d2671" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/matchpredictions" android:layout_alignParentTop="true" android:fontFamily="@font/caros" android:layout_alignParentStart="true"/>
+        <ScrollView android:background="@drawable/gradient_background" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/heading" android:fontFamily="@font/caros">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:id="@+id/PremierLeague" android:background="#fff" android:paddingLeft="15dp" android:paddingTop="5dp" android:paddingRight="15dp" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="20dp" android:layout_marginRight="15dp" android:layout_marginBottom="5dp" android:fontFamily="@font/caros" android:elevation="10dp" android:layout_marginHorizontal="15dp" android:paddingHorizontal="15dp" android:paddingVertical="5dp">
+                    <TextView android:textSize="25sp" android:textColor="#000" android:id="@+id/dotleftpl" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="⋮" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+                    <ImageView android:id="@+id/pllogo" android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/premierleague" android:scaleType="fitXY" android:layout_centerVertical="true" android:layout_marginStart="15dp" android:layout_toEndOf="@+id/dotleftpl"/>
+                    <TextView android:textSize="20sp" android:textColor="#000" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/premierleague" android:layout_centerVertical="true" android:layout_marginStart="15dp" android:layout_toEndOf="@+id/pllogo"/>
+                    <TextView android:textSize="25sp" android:textColor="#000" android:id="@+id/dotrightpl" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="⋮" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/LaLiga" android:background="#fff" android:paddingLeft="15dp" android:paddingTop="5dp" android:paddingRight="15dp" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="10dp" android:layout_marginRight="15dp" android:layout_marginBottom="5dp" android:layout_below="@+id/PremierLeague" android:fontFamily="@font/caros" android:elevation="10dp" android:layout_marginHorizontal="15dp" android:paddingHorizontal="15dp" android:paddingVertical="5dp">
+                    <TextView android:textSize="25sp" android:textColor="#000" android:id="@+id/dotleftll" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="⋮" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+                    <ImageView android:id="@+id/lllogo" android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/laliga" android:scaleType="fitXY" android:layout_centerVertical="true" android:layout_marginStart="15dp" android:layout_toEndOf="@+id/dotleftll"/>
+                    <TextView android:textSize="20sp" android:textColor="#000" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/laliga" android:layout_centerVertical="true" android:layout_marginStart="15dp" android:layout_toEndOf="@+id/lllogo"/>
+                    <TextView android:textSize="25sp" android:textColor="#000" android:id="@+id/dotrightll" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="⋮" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/Bundesliga" android:background="#fff" android:paddingLeft="15dp" android:paddingTop="5dp" android:paddingRight="15dp" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="10dp" android:layout_marginRight="15dp" android:layout_marginBottom="5dp" android:layout_below="@+id/LaLiga" android:fontFamily="@font/caros" android:elevation="10dp" android:layout_marginHorizontal="15dp" android:paddingHorizontal="15dp" android:paddingVertical="5dp">
+                    <TextView android:textSize="25sp" android:textColor="#000" android:id="@+id/dotleftbl" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="⋮" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+                    <ImageView android:id="@+id/bllogo" android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/bundesliga" android:scaleType="fitXY" android:layout_centerVertical="true" android:layout_marginStart="15dp" android:layout_toEndOf="@+id/dotleftbl"/>
+                    <TextView android:textSize="20sp" android:textColor="#000" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/bundesliga" android:layout_centerVertical="true" android:layout_marginStart="15dp" android:layout_toEndOf="@+id/bllogo"/>
+                    <TextView android:textSize="25sp" android:textColor="#000" android:id="@+id/dotrightbl" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="⋮" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/SerieA" android:background="#fff" android:paddingLeft="15dp" android:paddingTop="5dp" android:paddingRight="15dp" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="10dp" android:layout_marginRight="15dp" android:layout_marginBottom="5dp" android:layout_below="@+id/Bundesliga" android:fontFamily="@font/caros" android:elevation="10dp" android:layout_marginHorizontal="15dp" android:paddingHorizontal="15dp" android:paddingVertical="5dp">
+                    <TextView android:textSize="25sp" android:textColor="#000" android:id="@+id/dotleftsa" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="⋮" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+                    <ImageView android:id="@+id/salogo" android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/seriea" android:scaleType="fitXY" android:layout_centerVertical="true" android:layout_marginStart="15dp" android:layout_toEndOf="@+id/dotleftsa"/>
+                    <TextView android:textSize="20sp" android:textColor="#000" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/seriea" android:layout_centerVertical="true" android:layout_marginStart="15dp" android:layout_toEndOf="@+id/salogo"/>
+                    <TextView android:textSize="25sp" android:textColor="#000" android:id="@+id/dotrightsa" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="⋮" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/Ligue1" android:background="#fff" android:paddingLeft="15dp" android:paddingTop="5dp" android:paddingRight="15dp" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="10dp" android:layout_marginRight="15dp" android:layout_marginBottom="5dp" android:layout_below="@+id/SerieA" android:fontFamily="@font/caros" android:elevation="10dp" android:layout_marginHorizontal="15dp" android:paddingHorizontal="15dp" android:paddingVertical="5dp">
+                    <TextView android:textSize="25sp" android:textColor="#000" android:id="@+id/dotleftl1" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="⋮" android:layout_centerVertical="true" android:layout_alignParentStart="true"/>
+                    <ImageView android:id="@+id/l1logo" android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/ligue1" android:scaleType="fitXY" android:layout_centerVertical="true" android:layout_marginStart="15dp" android:layout_toEndOf="@+id/dotleftl1"/>
+                    <TextView android:textSize="20sp" android:textColor="#000" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/ligue1" android:layout_centerVertical="true" android:layout_marginStart="15dp" android:layout_toEndOf="@+id/l1logo"/>
+                    <TextView android:textSize="25sp" android:textColor="#000" android:id="@+id/dotrightl1" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="⋮" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+        <com.google.android.gms.ads.AdView android:id="@+id/ads" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" app:adSize="BANNER" app:adUnitId="ca-app-pub-2924639732611391/9782540655"/>
+    </RelativeLayout>
 
 </RelativeLayout>

@@ -23,44 +23,8 @@ public class FragmentMatches extends Fragment {
 
     public View onCreateView(LayoutInflater layoutInflater, ViewGroup viewGroup, Bundle bundle) {
         View inflate = layoutInflater.inflate(R.layout.fragment_matches, viewGroup, false);
-        AdView adView = new AdView(getContext());
-        adView.setAdSize(AdSize.BANNER);
-        adView.setAdUnitId("ca-app-pub-2924639732611391/9782540655");
-        MobileAds.initialize(getContext(), (OnInitializationCompleteListener) new OnInitializationCompleteListener() {
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
-        });
-        this.mAdView = (AdView) inflate.findViewById(R.id.ads);
-        this.mAdView.loadAd(new Builder().build());
-        RelativeLayout relativeLayout = (RelativeLayout) inflate.findViewById(R.id.LaLiga);
-        RelativeLayout relativeLayout2 = (RelativeLayout) inflate.findViewById(R.id.Bundesliga);
-        RelativeLayout relativeLayout3 = (RelativeLayout) inflate.findViewById(R.id.SerieA);
-        RelativeLayout relativeLayout4 = (RelativeLayout) inflate.findViewById(R.id.Ligue1);
-        ((RelativeLayout) inflate.findViewById(R.id.PremierLeague)).setOnClickListener(new OnClickListener() {
-            public void onClick(View view) {
-                FragmentMatches.this.startActivity(new Intent(FragmentMatches.this.getContext(), PremierLeagueMatches.class));
-            }
-        });
-        relativeLayout.setOnClickListener(new OnClickListener() {
-            public void onClick(View view) {
-                FragmentMatches.this.startActivity(new Intent(FragmentMatches.this.getContext(), LaLigaMatches.class));
-            }
-        });
-        relativeLayout2.setOnClickListener(new OnClickListener() {
-            public void onClick(View view) {
-                FragmentMatches.this.startActivity(new Intent(FragmentMatches.this.getContext(), BundesligaMatches.class));
-            }
-        });
-        relativeLayout3.setOnClickListener(new OnClickListener() {
-            public void onClick(View view) {
-                FragmentMatches.this.startActivity(new Intent(FragmentMatches.this.getContext(), SerieAMatches.class));
-            }
-        });
-        relativeLayout4.setOnClickListener(new OnClickListener() {
-            public void onClick(View view) {
-                FragmentMatches.this.startActivity(new Intent(FragmentMatches.this.getContext(), Ligue1Matches.class));
-            }
-        });
+
+
         return inflate;
     }
 }
