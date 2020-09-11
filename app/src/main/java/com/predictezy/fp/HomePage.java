@@ -23,6 +23,11 @@ import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemSelectedListener;
+import com.google.android.play.core.review.ReviewInfo;
+import com.google.android.play.core.review.ReviewManager;
+import com.google.android.play.core.review.ReviewManagerFactory;
+import com.google.android.play.core.tasks.OnCompleteListener;
+import com.google.android.play.core.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
 /* renamed from: com.predictezy.fp.HomePage */
@@ -55,6 +60,25 @@ public class HomePage extends AppCompatActivity {
         });
         this.mAdView = (AdView) findViewById(R.id.ads);
         this.mAdView.loadAd(new AdRequest.Builder().build());
+
+        ReviewManager manager = ReviewManagerFactory.create(this);
+        Task<ReviewInfo> request = manager.requestReviewFlow();
+        System.out.println(manager.toString());
+        System.out.println(request.toString());
+        request.addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                // We can get the ReviewInfo object
+                ReviewInfo reviewInfo = task.getResult();
+                Task<Void> flow = manager.launchReviewFlow(this, reviewInfo);
+                flow.addOnCompleteListener(task2 -> {
+                    // The flow has finished. The API does not indicate whether the user
+                    // reviewed or not, or even whether the review dialog was shown. Thus, no
+                    // matter the result, we continue our app flow.
+                });
+            } else {
+                // There was some problem, continue regardless of the result.
+            }
+        });
 
         RelativeLayout relativeLayout0 = (RelativeLayout)findViewById(R.id.PremierLeague);
         RelativeLayout relativeLayout1 = (RelativeLayout)findViewById(R.id.LaLiga);

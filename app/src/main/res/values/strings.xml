@@ -67,7 +67,6 @@
     <array name="BLTeams">
         <item>Select A Team</item>
         <item>Bayern Munich</item>
-        <item>Fortuna Dusseldorf</item>
         <item>Freiburg</item>
         <item>M\'Gladbach</item>
         <item>Wolfsburg</item>
@@ -83,11 +82,11 @@
         <item>Werder Bremen</item>
         <item>FC Union Berlin</item>
         <item>Cologne</item>
-        <item>Paderborn 07</item>
+        <item>Arminia Bielefeld</item>
+        <item>VfB Stuttgart</item>
     </array>
     <array name="BLTeamsShortHand">
         <item>BAY</item>
-        <item>DUS</item>
         <item>SCF</item>
         <item>BMG</item>
         <item>WOB</item>
@@ -103,8 +102,10 @@
         <item>SVW</item>
         <item>UNB</item>
         <item>CGN</item>
-        <item>SCP</item>
+        <item>BIE</item>
+        <item>WOB</item>
     </array>
+
     <array name="L1Teams">
         <item>Select A Team</item>
         <item>Marseille</item>
@@ -150,6 +151,7 @@
         <item>LOR</item>
         <item>LEN</item>
     </array>
+
     <array name="LLTeams">
         <item>Select A Team</item>
         <item>Real Betis</item>
@@ -160,18 +162,18 @@
         <item>Athletic Bilbao</item>
         <item>Valencia</item>
         <item>Getafe</item>
-        <item>Leganes</item>
         <item>Alaves</item>
         <item>Real Valladolid</item>
-        <item>Espanyol</item>
         <item>Sevilla</item>
         <item>Levante</item>
         <item>Eibar</item>
         <item>Atletico Madrid</item>
         <item>Real Sociedad</item>
-        <item>Real Mallorca</item>
         <item>Granada</item>
         <item>Osasuna</item>
+        <item>Cadiz</item>
+        <item>Huesca</item>
+        <item>Elche</item>
     </array>
     <array name="LLTeamsShortHand">
         <item>BET</item>
@@ -182,24 +184,24 @@
         <item>ATB</item>
         <item>VAL</item>
         <item>GET</item>
-        <item>LEG</item>
         <item>ALV</item>
         <item>REV</item>
-        <item>ESY</item>
         <item>SEV</item>
         <item>LVT</item>
         <item>EIB</item>
         <item>ATM</item>
         <item>SOC</item>
-        <item>RCD</item>
         <item>GCF</item>
         <item>OSA</item>
+        <item>CCF</item>
+        <item>HUE</item>
+        <item>ELC</item>
     </array>
+
     <array name="PLTeams">
         <item>Select A Team</item>
         <item>Manchester United</item>
         <item>Newcastle United</item>
-        <item>Watford</item>
         <item>Wolverhampton Wanderers</item>
         <item>Southampton</item>
         <item>Liverpool</item>
@@ -211,17 +213,17 @@
         <item>Burnley</item>
         <item>Brighton and Hove Albion</item>
         <item>Crystal Palace</item>
-        <item>AFC Bournemouth</item>
         <item>Manchester City</item>
         <item>Tottenham Hotspur</item>
         <item>Sheffield United</item>
-        <item>Norwich City</item>
         <item>Aston Villa</item>
+        <item>Leeds United</item>
+        <item>West Bromwich Albion</item>
+        <item>Fulham</item>
     </array>
     <array name="PLTeamsShortHand">
         <item>MUN</item>
         <item>NEW</item>
-        <item>WAT</item>
         <item>WLV</item>
         <item>SOU</item>
         <item>LIV</item>
@@ -233,13 +235,15 @@
         <item>BUR</item>
         <item>BRH</item>
         <item>CRY</item>
-        <item>BOU</item>
         <item>MCI</item>
         <item>TOT</item>
         <item>SHU</item>
-        <item>NOR</item>
         <item>AVA</item>
+        <item>LEE</item>
+        <item>WBA</item>
+        <item>FUL</item>
     </array>
+
     <array name="SATeams">
         <item>Select A Team</item>
         <item>Lazio</item>
@@ -251,7 +255,6 @@
         <item>Napoli</item>
         <item>Cagliari</item>
         <item>Inter Milan</item>
-        <item>Spal</item>
         <item>Udinese</item>
         <item>Roma</item>
         <item>AC Milan</item>
@@ -260,8 +263,9 @@
         <item>Sampdoria</item>
         <item>Genoa</item>
         <item>Verona</item>
-        <item>Lecce</item>
-        <item>Brescia</item>
+        <item>Benevento</item>
+        <item>Crotone</item>
+        <item>Spezia</item>
     </array>
     <array name="SATeamsShortHand">
         <item>LAZ</item>
@@ -273,7 +277,6 @@
         <item>NAP</item>
         <item>CAG</item>
         <item>INT</item>
-        <item>SPA</item>
         <item>UDI</item>
         <item>ROM</item>
         <item>MIL</item>
@@ -282,7 +285,8 @@
         <item>SAM</item>
         <item>GEN</item>
         <item>HEL</item>
-        <item>LEC</item>
-        <item>BCA</item>
+        <item>BEN</item>
+        <item>CRO</item>
+        <item>SPZ</item>
     </array>
 </resources>

@@ -25,6 +25,10 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.play.core.review.ReviewInfo;
+import com.google.android.play.core.review.ReviewManager;
+import com.google.android.play.core.review.ReviewManagerFactory;
+import com.google.android.play.core.tasks.Task;
 import com.google.firebase.analytics.FirebaseAnalytics.Param;
 import java.lang.reflect.Array;
 import java.math.RoundingMode;
@@ -369,5 +373,24 @@ public class BundesligaMatches extends AppCompatActivity {
         this.homeTeamChances.setText(sb2);
         this.drawChances.setText(sb4);
         this.awayTeamChances.setText(sb6);
+
+        ReviewManager manager = ReviewManagerFactory.create(this);
+        Task<ReviewInfo> request = manager.requestReviewFlow();
+        System.out.println(manager.toString());
+        System.out.println(request.toString());
+        request.addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                // We can get the ReviewInfo object
+                ReviewInfo reviewInfo = task.getResult();
+                Task<Void> flow = manager.launchReviewFlow(this, reviewInfo);
+                flow.addOnCompleteListener(task2 -> {
+                    // The flow has finished. The API does not indicate whether the user
+                    // reviewed or not, or even whether the review dialog was shown. Thus, no
+                    // matter the result, we continue our app flow.
+                });
+            } else {
+                // There was some problem, continue regardless of the result.
+            }
+        });
     }
 }
